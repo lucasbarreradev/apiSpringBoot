@@ -13,7 +13,6 @@ API hecha en Spring Boot para controlar el stock de un negocio. Cuenta con los m
 ## Autor ✒️
 **Lucas Barrera**
 
-* [Mail](barreralucas26@gmail.com)
 * [LinkedIn](https://www.linkedin.com/in/lucas-barrera-dev)
 
 ## Instalación 
