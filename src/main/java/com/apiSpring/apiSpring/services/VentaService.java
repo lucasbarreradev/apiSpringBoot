@@ -2,10 +2,12 @@ package com.apiSpring.apiSpring.services;
 
 import com.apiSpring.apiSpring.entities.Venta;
 import com.apiSpring.apiSpring.repositories.IventaRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Optional;
 
 @Service
@@ -20,6 +22,11 @@ public class VentaService {
 
     public Optional<Venta> getIdVenta(Long id) {
         return repositorio.findById(id);
+    }
+
+    @Transactional
+    public ArrayList<Venta> getForDate(Date fechaDesde, Date fechaHasta){
+        return repositorio.getForDate(fechaDesde, fechaHasta);
     }
 
     public Venta saveVenta(Venta venta) {

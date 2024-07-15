@@ -6,7 +6,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "proveedores")
-@Data
+@Data @AllArgsConstructor @NoArgsConstructor
 public class Proveedor {
         @Id
         @GeneratedValue(strategy= GenerationType.IDENTITY)

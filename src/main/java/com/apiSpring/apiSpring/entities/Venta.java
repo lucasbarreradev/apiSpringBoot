@@ -3,6 +3,8 @@ package com.apiSpring.apiSpring.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.sql.Date;
+
 
 @Entity
 @Table(name = "ventas")
@@ -19,5 +21,5 @@ public class Venta {
     private String tipoVenta;
     private String tipoComprobante;
     private Float totalVenta;
-    private String fechaVenta;
+    private Date fechaVenta;
 }

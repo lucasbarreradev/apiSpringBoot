@@ -1,11 +1,13 @@
 package com.apiSpring.apiSpring.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "detalles_ventas")
-@Data
+@Data @AllArgsConstructor @NoArgsConstructor
 public class DetalleVenta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

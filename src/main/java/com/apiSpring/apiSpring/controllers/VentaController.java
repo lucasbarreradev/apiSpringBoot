@@ -1,12 +1,14 @@
 package com.apiSpring.apiSpring.controllers;
 
-import com.apiSpring.apiSpring.entities.CuentaCorriente;
 import com.apiSpring.apiSpring.entities.Venta;
 import com.apiSpring.apiSpring.services.VentaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.ArrayList;
+
 import java.util.Optional;
 
 @RestController
@@ -24,7 +26,12 @@ public class VentaController {
     @GetMapping("/getId/{id}")
     public Optional<Venta> listarId(@PathVariable Long id) {
         return servicio.getIdVenta(id);
+    }
 
+    @GetMapping("/get-for-date/{fechaDesde}/{fechaHasta}")
+    public ArrayList<Venta> getForDate(@PathVariable("fechaDesde") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date fechaDesde,
+                                       @PathVariable("fechaHasta") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date fechaHasta) {
+        return servicio.getForDate(fechaDesde, fechaHasta);
     }
 
     @PostMapping("/save")

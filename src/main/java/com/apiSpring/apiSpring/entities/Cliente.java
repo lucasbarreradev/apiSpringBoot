@@ -7,7 +7,7 @@ import java.util.Set;
 
 @Entity
 @Table (name = "clientes")
-@Data
+@Data @AllArgsConstructor @NoArgsConstructor
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

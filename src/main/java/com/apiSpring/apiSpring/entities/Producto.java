@@ -7,7 +7,7 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "productos")
-@Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
+@Data @AllArgsConstructor @NoArgsConstructor
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

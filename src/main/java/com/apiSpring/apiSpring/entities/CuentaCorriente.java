@@ -5,7 +5,7 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "cuentas_corrientes")
-@Data
+@Data @AllArgsConstructor @NoArgsConstructor
 public class CuentaCorriente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
