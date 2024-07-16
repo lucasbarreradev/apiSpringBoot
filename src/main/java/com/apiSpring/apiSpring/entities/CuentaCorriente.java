@@ -1,7 +1,7 @@
 package com.apiSpring.apiSpring.entities;
 import jakarta.persistence.*;
 import lombok.*;
-import java.sql.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "cuentas_corrientes")
@@ -18,7 +18,7 @@ public class CuentaCorriente {
     private String tipoVenta;
     private String tipoComprobante;
     private Float totalVenta;
-    private Date fechaVenta;
+    private LocalDate fechaVenta;
     private Float saldo;
 
 }

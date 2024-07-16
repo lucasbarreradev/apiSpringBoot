@@ -1,14 +1,16 @@
 package com.apiSpring.apiSpring.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 
 @Entity
 @Table(name = "ventas")
-@Data
+@Data @AllArgsConstructor @NoArgsConstructor
 public class Venta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,5 +23,5 @@ public class Venta {
     private String tipoVenta;
     private String tipoComprobante;
     private Float totalVenta;
-    private Date fechaVenta;
+    private LocalDate fechaVenta;
 }

@@ -29,4 +29,5 @@ public class Proveedor {
         private String contacto;
         private String observaciones;
         private Boolean activo;
+
 }
