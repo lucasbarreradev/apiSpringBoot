@@ -101,7 +101,7 @@ La API incluye consultas para:
 - Cantidad de ventas por período
 - Información de stock
 
-##⚠️ Notas
+## ⚠️ Notas
 - Verificar que MySQL esté en ejecución
 - Configurar correctamente las credenciales de base de datos
 - Proyecto orientado a backend (sin interfaz gráfica)
